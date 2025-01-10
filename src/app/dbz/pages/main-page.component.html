@@ -1,0 +1,33 @@
+
+
+  <div class="row">
+
+    <h1>DBZ Personajes</h1>
+    <hr>
+
+
+    <!-- Nuestra componente dbz-lista debe hacer uso de nuestro evento onBorrarPersonaje, para que el valor $event se guarde y poder
+    emplearlo.
+    Ahora ha y que llamar a la lista donde se encuentra, en dbzService.
+    Este emite un numero
+    -->
+    <div class="col">
+      <dbz-lista [miLista]="personajes"
+      (onBorrarPersonaje)="servicioOnDeletePersonaje($event)"></dbz-lista>
+    </div>
+
+    <!-- Del mismo modo, nuestra componente que maneja el cargar personajes a la lista, tiene un evento para capturar el personaje en &event
+    y posteriormente meterlo en el array con el metodo pushearPersonaje
+    Ahora hay que llamar a los metodos igual, desde dbzService.
+    Este emite un personaje.
+    -->
+    <div class ="col">
+      <dbz-add-personaje (onNewPersonaje)="servicioOnNewPersonaje($event)"></dbz-add-personaje>
+    </div>
+
+
+
+  </div>
+
+
+

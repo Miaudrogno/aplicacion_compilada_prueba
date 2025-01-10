@@ -1,0 +1,32 @@
+<p>add-personaje.html</p>
+
+
+<h4> Añadir Personaje</h4>
+<form class="row">
+
+  <!-- Nuestro ngModel va a modelar un objeto personaje con los parametros nombre y fuerza
+  que le pasemos por teclado. -->
+<!--
+  Al hacer submit, llamamos al metodo addPersonaje, que se encuentra en el
+  add-personaje.component.ts -->
+
+  <input type="text" [(ngModel)]="personaje.nombre" name="nombre"
+  class="form-control mb-2" placeholder="Nombre">
+
+  <input type="text" [(ngModel)]="personaje.fuerza" name ="fuerza"
+  class="form-control mb-2" placeholder="Fuerza">
+
+  <!-- <input type="text" class="form-control mb-2" placeholder="Nombre"> -->
+  <!-- <input type="text" class="form-control mb-2" placeholder="Fuerza"> -->
+  <button type="submit" (click)="addPersonaje()"
+  class="btn btn-primary">Añadir</button>
+
+
+<pre>{{personaje.nombre}}</pre>
+<pre>{{personaje.fuerza}}</pre>
+
+<!-- <pre>{{personaje|json}}</pre> No consigo que funcione, no pipe found-->
+
+
+
+</form>
